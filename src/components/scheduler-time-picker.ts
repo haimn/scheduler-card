@@ -455,7 +455,8 @@ export class SchedulerTimePicker extends LitElement {
     div.hours, div.minutes {
       display: flex;
       flex-direction: column;
-      width: min-content;
+      width: auto;
+      align-items: center;
     }
     div.hours ha-icon, div.minutes ha-icon {
       --mdc-icon-size: 42px;
@@ -477,9 +478,18 @@ export class SchedulerTimePicker extends LitElement {
       --text-field-suffix-padding-left: 2px;
       --text-field-suffix-padding-right: 0;
       --text-field-text-align: center;
+      --mdc-text-field-padding-top: 0;
+      --mdc-text-field-padding-bottom: 0;
+      --mdc-text-field-padding-start: 0;
+      --mdc-text-field-padding-end: 0;
+      --mdc-text-field-text-align: center;
+      height: 40px;
+      line-height: 40px;
     }
     :host([large]) ha-textfield {
-      width: auto;
+      width: 80px;
+      height: 60px;
+      line-height: 60px;
       --mdc-typography-subtitle1-font-size: 42px;
       --mdc-text-field-outlined-idle-border-color: var(--card-background-color);
       --mdc-text-field-outlined-hover-border-color: var(--card-background-color);
